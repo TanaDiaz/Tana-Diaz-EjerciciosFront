@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copas del mundo por pais</title>
+<style>
+  :root {
+    --colorFondo: #f0f2f5;
+    --colorPrimario: #1c2b39;
+    --colorBorde: #dcdcdc;
+    --colorFilaPar: #f7f7f7;
+    --colorBlanco: #ffffff;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+  }
+
+  main {
+    background-color: var(--colorBlanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h1 {
+    text-align: center;
+    color: var(--colorPrimario);
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid var(--colorBorde);
+  }
+
+  th {
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--colorFilaPar);
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <h1>Cantidad de copas del mundo ganadas por pais</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Pais</th>
+        <th>Copas del mundo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Brasil</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Alemania</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Italia</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Argentina</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Francia</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Uruguay</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Inglaterra</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Espana</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+</main>
+
+</body>
+</html>

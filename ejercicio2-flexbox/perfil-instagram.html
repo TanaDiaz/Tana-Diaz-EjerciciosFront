@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil de Instagram</title>
+<style>
+  :root {
+    --colorBorde: #efefef;
+    --colorTexto: #262626;
+    --colorGris: #8e8e8e;
+    --colorGrisClaro: #dbdbdb;
+    --colorFondoBoton: #efefef;
+    --colorBlanco: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorBlanco);
+    color: var(--colorTexto);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--colorBorde);
+    background-color: var(--colorBlanco);
+    position: sticky;
+    top: 0;
+  }
+
+  header .logo {
+    height: 24px;
+  }
+
+  header .usuario {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .perfil {
+    padding: 16px;
+  }
+
+  .fila-perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .estadisticas {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .estadisticas .dato {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .estadisticas .numero {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .estadisticas .etiqueta {
+    font-size: 12px;
+    color: var(--colorGris);
+  }
+
+  .info-texto {
+    margin-top: 14px;
+  }
+
+  .info-texto .nombre {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .info-texto .bio {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .botones {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .botones button {
+    flex: 1;
+    padding: 7px 0;
+    border-radius: 6px;
+    border: 1px solid var(--colorGrisClaro);
+    background-color: var(--colorFondoBoton);
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .historias {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .historia img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--colorGrisClaro);
+    object-fit: cover;
+  }
+
+  .historia span {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+
+  .tabs {
+    display: flex;
+    border-top: 1px solid var(--colorBorde);
+  }
+
+  .tabs .tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--colorGris);
+    border-top: 1px solid transparent;
+  }
+
+  .tabs .tab.activo {
+    color: var(--colorTexto);
+    border-top: 1px solid var(--colorTexto);
+  }
+
+  .grilla {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grilla img {
+    width: 33.333%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--colorBlanco);
+  }
+
+  @media (min-width: 700px) {
+    .perfil, header {
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    header {
+      border-bottom: none;
+    }
+
+    .fila-perfil {
+      gap: 40px;
+    }
+
+    .foto-perfil {
+      width: 140px;
+      height: 140px;
+    }
+
+    .grilla {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .grilla img {
+      width: calc(33.333% - 16px);
+      margin: 8px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="imagenes/Instagram_logo.png" alt="Instagram">
+  <div class="usuario">lu.fernandez</div>
+</header>
+
+<div class="perfil">
+  <div class="fila-perfil">
+    <img class="foto-perfil" src="imagenes/foto_de_perfil.webp" alt="Foto de perfil">
+    <div class="estadisticas">
+      <div class="dato">
+        <span class="numero">6</span>
+        <span class="etiqueta">publicaciones</span>
+      </div>
+      <div class="dato">
+        <span class="numero">248</span>
+        <span class="etiqueta">seguidores</span>
+      </div>
+      <div class="dato">
+        <span class="numero">310</span>
+        <span class="etiqueta">seguidos</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-texto">
+    <div class="nombre">Lucia Fernandez</div>
+    <div class="bio">Fotografia y viajes. Pontevedra, Buenos Aires.</div>
+  </div>
+
+  <div class="botones">
+    <button>Seguir</button>
+    <button>Mensaje</button>
+  </div>
+</div>
+
+<div class="historias">
+  <div class="historia">
+    <img src="imagenes/amigos.jpg" alt="Historia">
+    <span>Amigos</span>
+  </div>
+  <div class="historia">
+    <img src="imagenes/caballo.jpg" alt="Historia">
+    <span>Animales</span>
+  </div>
+  <div class="historia">
+    <img src="imagenes/comida.jpg" alt="Historia">
+    <span>Comida</span>
+  </div>
+  <div class="historia">
+    <img src="imagenes/trabajando.jpg" alt="Historia">
+    <span>Trabajo</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab activo">PUBLICACIONES</div>
+  <div class="tab">ETIQUETADO</div>
+</div>
+
+<div class="grilla">
+  <img src="imagenes/amigos.jpg" alt="Publicacion">
+  <img src="imagenes/caballo.jpg" alt="Publicacion">
+  <img src="imagenes/comida.jpg" alt="Publicacion">
+  <img src="imagenes/libros_apilados.avif" alt="Publicacion">
+  <img src="imagenes/taza_de_cafe.avif" alt="Publicacion">
+  <img src="imagenes/trabajando.jpg" alt="Publicacion">
+</div>
+
+</body>
+</html>

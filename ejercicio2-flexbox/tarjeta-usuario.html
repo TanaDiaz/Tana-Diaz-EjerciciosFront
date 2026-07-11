@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjeta de usuario</title>
+<style>
+  :root {
+    --colorFondo: #dfe6ec;
+    --colorAcento: #3a6ea5;
+    --colorAcentoClaro: #6fa8dc;
+    --colorPrimario: #1c2b39;
+    --colorGris: #777777;
+    --colorGrisClaro: #999999;
+    --colorBorde: #eeeeee;
+    --colorBlanco: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondo);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+  }
+
+  .tarjeta {
+    background-color: var(--colorBlanco);
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  .banner {
+    height: 90px;
+    background-image: url("imagenes/amigos.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .datos-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+  }
+
+  .foto-perfil {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid var(--colorBlanco);
+    margin-top: -45px;
+    object-fit: cover;
+  }
+
+  .nombre {
+    margin-top: 12px;
+    font-size: 18px;
+    color: var(--colorPrimario);
+  }
+
+  .ciudad {
+    font-size: 13px;
+    color: var(--colorGris);
+    margin-top: 4px;
+  }
+
+  .estadisticas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 18px;
+    border-top: 1px solid var(--colorBorde);
+    padding-top: 15px;
+  }
+
+  .dato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dato .numero {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--colorPrimario);
+  }
+
+  .dato .etiqueta {
+    font-size: 11px;
+    color: var(--colorGrisClaro);
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="tarjeta">
+  <div class="banner"></div>
+  <div class="datos-perfil">
+    <img class="foto-perfil" src="imagenes/foto_de_perfil.webp" alt="Foto de perfil">
+    <div class="nombre">Lucia Fernandez</div>
+    <div class="ciudad">Pontevedra, Buenos Aires</div>
+    <div class="estadisticas">
+      <div class="dato">
+        <div class="numero">248</div>
+        <div class="etiqueta">Seguidores</div>
+      </div>
+      <div class="dato">
+        <div class="numero">1.2k</div>
+        <div class="etiqueta">Likes</div>
+      </div>
+      <div class="dato">
+        <div class="numero">6</div>
+        <div class="etiqueta">Fotos</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

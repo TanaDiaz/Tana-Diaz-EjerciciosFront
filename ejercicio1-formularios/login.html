@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesion</title>
+<style>
+  :root {
+    --colorFondo: #e9edf2;
+    --colorPrimario: #1c2b39;
+    --colorAcento: #3a6ea5;
+    --colorAcentoOscuro: #2d567e;
+    --colorBorde: #c7c7c7;
+    --colorTexto: #333333;
+    --colorBlanco: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorFondo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  main {
+    background-color: var(--colorBlanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--colorPrimario);
+    margin-bottom: 25px;
+  }
+
+  .campo {
+    margin-bottom: 18px;
+  }
+
+  .campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--colorTexto);
+  }
+
+  .campo input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--colorBorde);
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .campo input:focus {
+    outline: none;
+    border-color: var(--colorAcento);
+  }
+
+  button {
+    width: 100%;
+    padding: 11px;
+    background-color: var(--colorAcento);
+    color: var(--colorBlanco);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--colorAcentoOscuro);
+  }
+
+  .pie {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--colorTexto);
+  }
+
+  .pie a {
+    color: var(--colorAcento);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <h1>Iniciar sesion</h1>
+  <form>
+    <div class="campo">
+      <label for="usuario">Usuario o email</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+    </div>
+    <div class="campo">
+      <label for="clave">Contrasena</label>
+      <input type="password" id="clave" name="clave" placeholder="Ingrese su contrasena" required minlength="6">
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+  <p class="pie">No tenes cuenta? <a href="registro.html">Registrate aca</a></p>
+</main>
+
+</body>
+</html>
