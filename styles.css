@@ -1,0 +1,536 @@
+/* =========================================================
+   Hogar & Co | styles.css  (Entrega 2, mobile first)
+   Orden: 1. Variables  2. Base  3. Componentes  4. Secciones
+          5. Tablet (768px)  6. Escritorio (1024px)
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700&family=Geist:wght@400;500;600&display=swap");
+
+/* ---------- 1. Variables ---------- */
+:root {
+  /* Colores principales */
+  --color-ink: #2a2724;            /* gris oscuro casi negro */
+  --color-ink-deep: #1e1c1a;       /* footer y texto sobre dorado */
+  --color-gold: #a3875f;           /* dorado apagado (acento) */
+  --color-gold-dark: #7a6240;      /* dorado para texto sobre fondo claro */
+  --color-gold-light: #cdb792;     /* dorado para texto sobre fondo oscuro */
+
+  /* Color de detalle (datos clave) */
+  --color-success: #10b981;        /* verde "Entrega inmediata" */
+
+  /* Escala de grises */
+  --gray-100: #f2f1ef;
+  --gray-300: #d6d3cf;
+  --gray-600: #5e5a55;
+
+  /* Fondos y texto */
+  --color-bg: #f5f0e8;             /* beige suave */
+  --color-surface: #ffffff;
+  --color-text: #2a2724;
+  --color-text-muted: var(--gray-600);
+  --color-text-on-dark: #f5f0e8;
+  --color-border: var(--gray-300);
+
+  /* Tipografías */
+  --font-heading: "Gabarito", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Geist", system-ui, "Segoe UI", Arial, sans-serif;
+
+  /* Espaciados */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Otros */
+  --radius: 0.375rem;
+  --shadow: 0 0.5rem 1.5rem rgba(42, 39, 36, 0.14);
+  --container: 72rem;
+  --transition: 0.2s ease;
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-ink);
+}
+
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin: 0 0 var(--space-sm);
+  max-width: 65ch;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-ink);
+  text-underline-offset: 0.2em;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-gold-dark);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* ---------- 3. Componentes reutilizables ---------- */
+
+/* Contenedor centrado */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-sm);
+}
+
+/* Secciones */
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--alt {
+  background-color: var(--color-surface);
+}
+
+.section--dark {
+  background-color: var(--color-ink);
+  color: var(--color-text-on-dark);
+}
+
+.section--dark h2,
+.section--dark h3 {
+  color: var(--color-text-on-dark);
+}
+
+.section--dark a:not(.btn) {
+  color: var(--color-gold-light);
+}
+
+.section--dark a:not(.btn):hover {
+  color: var(--color-surface);
+}
+
+.section__intro {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.section--dark .section__intro {
+  color: var(--color-text-on-dark);
+}
+
+/* Botón (oscuro por defecto; variante dorada para fondos oscuros) */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color var(--transition), color var(--transition),
+    transform var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-ink-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn--accent {
+  background-color: var(--color-gold);
+  color: var(--color-ink-deep);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-gold-light);
+}
+
+/* Tarjeta */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.card__media {
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Etiqueta verde para datos clave */
+.badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--color-success);
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-md);
+}
+
+.card__title {
+  margin-bottom: var(--space-xs);
+}
+
+.card__price {
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+}
+
+.card__details {
+  color: var(--color-text-muted);
+}
+
+.card__link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- 4. Secciones ---------- */
+
+/* Header y menú (móvil: logo arriba, menú debajo) */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background-color: var(--color-ink-deep);
+  color: var(--color-text-on-dark);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.site-header__logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.site-header__title {
+  margin: 0;
+  color: var(--color-text-on-dark);
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs) var(--space-md);
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.nav__link:hover {
+  color: var(--color-gold-light);
+  border-bottom-color: var(--color-gold);
+}
+
+/* Presentación (hero) */
+.hero {
+  padding-block: var(--space-xl);
+  background-color: var(--color-ink);
+  color: var(--color-text-on-dark);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+}
+
+.hero__text {
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+}
+
+/* Sobre nosotros */
+.values {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.values__item {
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--color-gold);
+}
+
+.values__item p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Propiedades (tarjetas): 1 columna en móvil */
+.card-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.gallery__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Datos destacados */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.stats__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-gold-light);
+}
+
+.stats__label {
+  display: block;
+  font-weight: 600;
+}
+
+.stats__text {
+  display: block;
+  font-size: 0.9rem;
+}
+
+/* ¿Por qué elegirnos? */
+.features {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.features__item {
+  padding: var(--space-md);
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+}
+
+.features__item p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Contacto */
+.contact__phone {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  padding-block: var(--space-lg);
+  background-color: var(--color-ink-deep);
+  color: var(--color-text-on-dark);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.site-footer h2,
+.site-footer h3 {
+  color: var(--color-text-on-dark);
+}
+
+.site-footer p {
+  margin-bottom: var(--space-xs);
+}
+
+.site-footer__list {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.site-footer a {
+  color: var(--color-text-on-dark);
+}
+
+.site-footer a:hover {
+  color: var(--color-gold-light);
+}
+
+.site-footer__copy {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ---------- 5. Tablet (desde 768px) ---------- */
+@media (min-width: 768px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 2.3rem; }
+
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+
+  .hero {
+    padding-block: 6rem;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+    max-width: 18ch;
+  }
+
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* ---------- 6. Escritorio (desde 1024px) ---------- */
+@media (min-width: 1024px) {
+  /* Menú horizontal junto al logo */
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: var(--space-lg);
+  }
+
+  .nav__list {
+    flex-wrap: nowrap;
+    gap: var(--space-lg);
+  }
+
+  .hero__title {
+    font-size: 4.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
