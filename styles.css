@@ -113,6 +113,7 @@ a {
 
 .site-header__logo {
   width: 56px;
+  height: 56px;
   margin: var(--espacio-pequeno);
 }
 
@@ -266,7 +267,7 @@ a {
 }
 
 /* 7. Galería: se conserva la proporción original de cada imagen.
-   Reemplazar las rutas de ejemplo indicadas en el HTML. */
+   Las fotografías están guardadas localmente en imagenes/. */
 .gallery {
   display: flex;
   flex-wrap: wrap;
