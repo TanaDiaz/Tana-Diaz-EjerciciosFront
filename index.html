@@ -65,44 +65,48 @@
         <h2>Nuestras Residencias Destacadas</h2>
         <p class="section__intro">Explora nuestra exclusiva selección curada de residencias que combinan la más alta calidad arquitectónica con ubicaciones inigualables.</p>
 
-        <div class="card-grid">
-          <article class="card">
+        <!-- Rutas de ejemplo: colocar las fotos con estos nombres dentro de imagenes/. -->
+        <div class="cards">
+          <div class="card">
             <div class="card__media">
               <img class="card__image" src="imagenes/casa-praderas.jpg" alt="Casa Praderas en La Dehesa, Santiago">
             </div>
             <div class="card__body">
               <h3 class="card__title">Casa Praderas</h3>
+              <p>Una casa amplia para disfrutar en familia, con espacios pensados para compartir.</p>
               <p class="card__price">UF 28.900 - La Dehesa, Santiago</p>
               <p class="card__details">320 m² - 4 dormitorios - 4 baños</p>
               <a class="btn card__link" href="#contacto">Consultar</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
+          <div class="card">
             <div class="card__media">
               <img class="card__image" src="imagenes/penthouse-alerce.jpg" alt="Penthouse Alerce en Vitacura, Santiago">
               <span class="badge">Entrega inmediata</span>
             </div>
             <div class="card__body">
               <h3 class="card__title">Penthouse Alerce</h3>
+              <p>Un departamento exclusivo con ambientes luminosos y una ubicación privilegiada.</p>
               <p class="card__price">UF 19.500 - Vitacura, Santiago</p>
               <p class="card__details">185 m² - 2 dormitorios - 3 baños</p>
               <a class="btn card__link" href="#contacto">Consultar</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
+          <div class="card">
             <div class="card__media">
               <img class="card__image" src="imagenes/finca-los-robles.jpg" alt="Finca Los Robles en Chicureo, Colina">
               <span class="badge">Entrega inmediata</span>
             </div>
             <div class="card__body">
               <h3 class="card__title">Finca Los Robles</h3>
+              <p>Una residencia espaciosa para vivir con tranquilidad cerca de la naturaleza.</p>
               <p class="card__price">UF 24.200 - Chicureo, Colina</p>
               <p class="card__details">410 m² - 5 dormitorios - 5 baños</p>
               <a class="btn card__link" href="#contacto">Consultar</a>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -124,22 +128,22 @@
       <div class="container">
         <h2>Hogar & Co en números</h2>
         <ul class="stats">
-          <li>
+          <li class="stats__item">
             <span class="stats__number">+500</span>
             <span class="stats__label">Propiedades Vendidas</span>
             <span class="stats__text">Transacciones seguras</span>
           </li>
-          <li>
+          <li class="stats__item">
             <span class="stats__number">+10</span>
             <span class="stats__label">Años de Experiencia</span>
             <span class="stats__text">En el mercado premium</span>
           </li>
-          <li>
+          <li class="stats__item">
             <span class="stats__number">98%</span>
             <span class="stats__label">Satisfacción Clientes</span>
             <span class="stats__text">Asesoramiento excelente</span>
           </li>
-          <li>
+          <li class="stats__item">
             <span class="stats__number">UF 1.2M+</span>
             <span class="stats__label">Portafolio Administrado</span>
             <span class="stats__text">Confianza institucional</span>
@@ -178,9 +182,9 @@
       <div class="container">
         <h2>¿Listo para dar el siguiente gran paso?</h2>
         <p>Agenda una reunión presencial en nuestras oficinas o solicita una videollamada personalizada con uno de nuestros ejecutivos senior. Tu próximo hogar te espera.</p>
-        <p class="contact__phone">Llámanos: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+        <p class="contact__phone">Llámanos: <a class="contact__link" href="tel:+56912345678">+56 9 1234 5678</a></p>
 
-        <p>Seguinos también en nuestra red social: <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram de Hogar & Co</a></p>
+        <p>Seguinos también en nuestra red social: <a class="contact__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram de Hogar & Co</a></p>
       </div>
     </section>
 
@@ -188,22 +192,22 @@
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <div>
+      <div class="site-footer__column">
         <h2>Hogar & Co</h2>
         <p>La inmobiliaria boutique líder en residencias y departamentos de lujo. Tu próximo hogar te espera.</p>
       </div>
 
-      <nav aria-label="Pie de página">
+      <nav class="site-footer__column" aria-label="Pie de página">
         <h3>Navegación</h3>
         <ul class="site-footer__list">
-          <li><a href="#presentacion">Inicio</a></li>
-          <li><a href="#propiedades">Propiedades</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a class="site-footer__link" href="#presentacion">Inicio</a></li>
+          <li><a class="site-footer__link" href="#propiedades">Propiedades</a></li>
+          <li><a class="site-footer__link" href="#galeria">Galería</a></li>
+          <li><a class="site-footer__link" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
-      <div>
+      <div class="site-footer__column">
         <p>Estudiante: Felipe Tana</p>
         <p>Curso: 3 C</p>
         <p>Año: 2026</p>
