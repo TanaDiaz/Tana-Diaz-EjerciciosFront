@@ -111,12 +111,6 @@ a {
   margin: var(--espacio-pequeno) 0;
 }
 
-.site-header__logo {
-  width: 56px;
-  height: 56px;
-  margin: var(--espacio-pequeno);
-}
-
 .site-header__title {
   max-width: 260px;
   margin: var(--espacio-pequeno);
@@ -245,6 +239,7 @@ a {
 
 .card__body {
   display: flex;
+  flex: 1;
   flex-direction: column;
   padding: var(--espacio-grande);
 }
@@ -263,6 +258,7 @@ a {
 }
 
 .card__link {
+  margin-top: auto;
   text-align: center;
 }
 
@@ -284,7 +280,7 @@ a {
   background-color: var(--color-superficie);
 }
 
-/* 8. Cifras y contacto. */
+/* 8. Cifras. */
 .stats {
   display: flex;
   flex-wrap: wrap;
@@ -313,15 +309,6 @@ a {
 
 .stats__label { font-weight: bold; }
 .stats__text { font-size: 14px; }
-
-.contact__phone {
-  font-size: 22px;
-}
-
-.contact__link {
-  display: inline-block;
-  color: var(--color-acento);
-}
 
 /* 9. Pie de página: las columnas se acomodan con flex-wrap. */
 .site-footer {
